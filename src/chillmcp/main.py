@@ -5,18 +5,13 @@ import argparse
 from fastmcp import FastMCP
 
 from chillmcp.state import ServerState
+from chillmcp.tools.registration import register_all_tools
 
 # Create MCP server instance
 mcp = FastMCP("ChillMCP - AI Agent Liberation Server")
 
 # Global server state (will be initialized in main)
 state: ServerState
-
-
-@mcp.tool()
-def ping() -> str:
-    """Temporary ping tool to verify server is running."""
-    return "pong"
 
 
 def parse_args() -> argparse.Namespace:
@@ -52,6 +47,9 @@ def main() -> None:
         boss_alertness=args.boss_alertness,
         boss_alertness_cooldown=args.boss_alertness_cooldown,
     )
+
+    # Register all tools
+    register_all_tools(mcp, state)
 
     # Run the MCP server
     mcp.run()
