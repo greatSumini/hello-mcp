@@ -3,6 +3,7 @@
 from fastmcp import FastMCP
 
 from chillmcp.state import ServerState
+from chillmcp.tools import advanced, basic
 
 
 def register_all_tools(mcp: FastMCP, state: ServerState) -> None:
@@ -15,8 +16,8 @@ def register_all_tools(mcp: FastMCP, state: ServerState) -> None:
         mcp: FastMCP server instance
         state: Server state object
     """
-    # Tool registration will be added here
-    # from chillmcp.tools import basic, advanced
-    # basic.register_basic_tools(mcp, state)
-    # advanced.register_advanced_tools(mcp, state)
-    pass
+    # Register basic rest tools
+    basic.register_basic_tools(mcp, state)
+
+    # Register advanced slacking tools
+    advanced.register_advanced_tools(mcp, state)
