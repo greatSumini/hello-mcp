@@ -1,7 +1,7 @@
 """Tests for stress management domain logic."""
 
 
-from src.chillmcp.domain.stress import apply_stress_reduction, calculate_stress_increase
+from domain.stress import apply_stress_reduction, calculate_stress_increase
 
 
 def test_calculate_stress_increase_over_time() -> None:

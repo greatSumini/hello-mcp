@@ -2,7 +2,7 @@
 
 import re
 
-from src.chillmcp.lib.response import build_response_text
+from lib.response import build_response_text
 
 
 def test_build_response_format() -> None:

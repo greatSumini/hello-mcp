@@ -5,9 +5,9 @@ import time
 
 from fastmcp import FastMCP
 
-from chillmcp.domain import boss, stress
-from chillmcp.lib.response import build_response_text
-from chillmcp.state import ServerState
+from domain import boss, stress
+from lib.response import build_response_text
+from state import ServerState
 
 
 def register_basic_tools(mcp: FastMCP, state: ServerState) -> None:

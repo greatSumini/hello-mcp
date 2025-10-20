@@ -2,8 +2,8 @@
 
 from fastmcp import FastMCP
 
-from chillmcp.state import ServerState
-from chillmcp.tools import advanced, basic
+from state import ServerState
+from tools import advanced, basic
 
 
 def register_all_tools(mcp: FastMCP, state: ServerState) -> None:

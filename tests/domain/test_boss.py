@@ -1,6 +1,6 @@
 """Tests for boss alert management domain logic."""
 
-from src.chillmcp.domain.boss import calculate_boss_alert_cooldown, should_increase_boss_alert
+from domain.boss import calculate_boss_alert_cooldown, should_increase_boss_alert
 
 
 def test_should_increase_boss_alert_probability() -> None:

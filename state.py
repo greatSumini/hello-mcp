@@ -3,7 +3,7 @@
 import time
 from dataclasses import dataclass
 
-from chillmcp.domain import boss, stress
+from domain import boss, stress
 
 
 @dataclass
